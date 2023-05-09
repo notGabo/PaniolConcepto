@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- import css -->
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inicio sesion</h1>
+      <form action="./js/login.js" target="dummyframe">
+        <label for="username">Nombre de usuario</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Ingrese su nombre de usuario"
+        />
+
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Ingrese su contraseña"
+        />
+        <input id="loginBtn" type="submit" value="Login" />
+      </form>
+      <p>¿No tienes una cuenta?</p>
+      <button class="register-button">Registrarse</button>
+    </div>
+    <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
