@@ -1,6 +1,7 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const loginBtn = document.getElementById('loginBtn');
+const registerBtn = document.getElementById('registerBtn');
 
 loginBtn.addEventListener('click', () => {
     const user = username.value;
@@ -9,6 +10,14 @@ loginBtn.addEventListener('click', () => {
     if (user === 'admin' && pass === 'admin') {
         window.location = './home.html';
     } else {
-        alert('Usuario o contraseña invalida');
+        Swal.fire(
+            'Credenciales Inválidas',
+            'El nombre de usuario o contraseña son incorrectos.',
+            'error',
+          )
     }
+});
+
+registerBtn.addEventListener("click", function() {
+  window.location = './register.html';
 });
