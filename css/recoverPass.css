@@ -35,7 +35,8 @@ body {
   
   input[type="text"],
   input[type="password"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="number"] {
     border: none;
     padding: 10px;
     width: 100%;
@@ -49,21 +50,24 @@ body {
   
   input[type="text"]:focus,
   input[type="password"]:focus,
-  input[type="email"]:focus {
+  input[type="email"]:focus,
+  input[type="number"]:focus {
     outline: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     /* transform: translateY(-2px); */
   }
   
   input[type="text"]:hover,
-  input[type="password"]:hover
-  input[type="email"]:hover {
+  input[type="password"]:hover,
+  input[type="email"]:hover,
+  input[type="number"]:hover {
     background-color: #ddd;
   }
   
   input[type="text"]::placeholder,
-  input[type="password"]::placeholder
-  input[type="email"]::placeholder {
+  input[type="password"]::placeholder,
+  input[type="email"]::placeholder,
+  input[type="number"]::placeholder {
     color: #999;
   }
   

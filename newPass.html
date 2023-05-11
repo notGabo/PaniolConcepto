@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Contraseña</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/recoverPass.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Crear Nueva Contraseña</h1>
+        <form action="./js/newPass.js" target="dummyframe">
+            <label for="pass">Ingrese su nueva contraseña</label>
+            <input
+                class="input"
+                type="password"
+                id="pass"
+                name="pass"
+                placeholder="Ingrese la contraseña"
+            />
+
+            <label for="pass2">Repita la contraseña</label>
+            <input
+                class="input"
+                type="password"
+                id="pass2"
+                name="pass2"
+                placeholder="Ingrese la contraseña"
+            />
+            <input id="newPassBtn" type="submit" value="Aceptar"/>
+        </form>
+    </div>
+
+    <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
+
+    <script src="./js/newPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+</body>
+</html>
