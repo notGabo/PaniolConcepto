@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña</title>
+    <title>Código de Verificación</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/recoverPass.css"/>
 </head>
 <body>
     <div class="container">
-        <h1>Recuperar Contraseña</h1>
-        <form action="./js/recoverPass.js" target="dummyframe">
-            <p>Si su cuenta de correo existe, se le enviará un email con instrucciones para recuperar su contraseña.</p>
+        <h1>Código de Verificación</h1>
+        <form action="./js/codePass.js" target="dummyframe">
+            <p>Ingrese el código de verificación que se ha enviado a su correo.</p>
             <br><br>
-            <label for="email">Ingrese su Correo de Recuperación</label>
+            <label for="code">Ingrese el Código de Verificación</label>
             <input
                 class="input"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Ingrese su correo"
+                type="number"
+                id="code"
+                name="code"
+                placeholder="Ingrese el código"
             />
-            <input id="recoverBtn" type="submit" value="Enviar"/>
+            <input id="codeBtn" type="submit" value="Aceptar"/>
         </form>
     </div>
 
     <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
 
-    <script src="./js/recoverPass.js"></script>
+    <script src="./js/codePass.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
 </body>
