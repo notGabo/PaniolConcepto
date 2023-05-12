@@ -1,0 +1,533 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar productos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/reservar.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+              height="15"
+              alt="MDB Logo"
+              loading="lazy"
+            />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="right-elements">
+          <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a
+              class="text-reset me-3"
+              data-bs-toggle="modal"
+              data-bs-target="#reservaModal"
+            >
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <!-- Avatar -->
+            <div class="dropdown">
+              <a
+                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://bit.ly/42KeQys"
+                  class="rounded-circle"
+                  height="25"
+                />
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#">My profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Notifications -->
+            <div class="dropdown">
+              <a
+                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"
+                  >+99</span
+                >
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right elements -->
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2" style="margin: auto; border-color: black">
+          <div class="filtro">
+            <div class="list-group" role="tablist">
+              <a
+                class="list-group-item list-group-item-action active"
+                id="list-home-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-home"
+                >Todos</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-profile"
+                >Populares</a
+              >
+            </div>
+            <br />
+            <h4>Categoria:</h4>
+            <div class="list-group" role="tablist">
+              <a
+                class="list-group-item list-group-item-action active"
+                id="list-home-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-home"
+                >Tecnologia</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-profile"
+                >Deportes</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-messages-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-messages"
+                >Redes</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-settings"
+                >Otros</a
+              >
+            </div>
+
+            <br />
+            <h4>Ordenar por:</h4>
+            <div class="list-group" role="tablist">
+              <a
+                class="list-group-item list-group-item-action active"
+                id="list-home-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-home"
+                >Stock</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-profile-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-profile"
+                >A-Z</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-messages-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-messages"
+                >Z-A</a
+              >
+              <a
+                class="list-group-item list-group-item-action"
+                id="list-settings-list"
+                data-bs-toggle="list"
+                role="tab"
+                aria-controls="list-settings"
+                >Nuevos!</a
+              >
+            </div>
+            <br />
+            <h4>Buscar:</h4>
+            <div class="input-group">
+              <input
+                type="search"
+                class="form-control rounded"
+                aria-label="Search"
+                aria-describedby="search-addon"
+              />
+              <span class="input-group-text border-0" id="search-addon">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <section class="section-products">
+            <div class="container">
+              <div class="row justify-content-center text-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="header">
+                    <h3>Productos destacados</h3>
+                    <h2>Lo más pedido</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- 1-->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-1" class="single-product">
+                    <div class="part-1">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">1</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-2" class="single-product">
+                    <div class="part-1">
+                      <span class="discount">Sin stock</span>
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">2</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-3" class="single-product">
+                    <div class="part-1">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">3</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-4" class="single-product">
+                    <div class="part-1">
+                      <span class="new">Recien agregado</span>
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">4</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-1" class="single-product">
+                    <div class="part-1">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">5</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-2" class="single-product">
+                    <div class="part-1">
+                      <span class="few-units">Pocas unidades</span>
+                      <ul
+                        style="
+                          display: flex;
+                          justify-content: center;
+                          margin: auto;
+                        "
+                      >
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">6</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-3" class="single-product">
+                    <div class="part-1">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">7</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div id="product-4" class="single-product">
+                    <div class="part-1">
+                      <span class="few-units">Ultima unidad</span>
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-plus"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="part-2">
+                      <h3 class="product-title">8</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="reservaModal"
+      tabindex="-1"
+      aria-labelledby="reservaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reservaModalLabel">Reserva</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th><div class="itemTabla">ID</div></th>
+                  <th><div class="itemTabla">Producto</div></th>
+                  <th><div class="itemTabla">Cantidad</div></th>
+                  <th><div class="itemTabla">Eliminar</div></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><div class="itemTabla">1</div></td>
+                  <td><div class="itemTabla">Teclado</div></td>
+                  <td><div class="itemTabla">1</div></td>
+                  <td>
+                    <div class="itemTabla">
+                      <button type="button" class="btn btn-danger">x</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="itemTabla">32</div></td>
+                  <td><div class="itemTabla">Balón de furbo</div></td>
+                  <td><div class="itemTabla">2</div></td>
+                  <td>
+                    <div class="itemTabla">
+                      <button type="button" class="btn btn-danger">x</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="carrito"></tbody>
+            </table>
+            <hr />
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="hora" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="vaciar-carrito">
+              Vaciar carrito
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="confirmar-reserva"
+            >
+              Confirmar reserva
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
