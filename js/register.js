@@ -25,30 +25,17 @@ function validarPass(pass) {
     return true;
 }
 
-// const btnMostrar = document.getElementById('mostrarContrasena');
-// const inputContrasena = document.getElementById('contrasena');
-
-// btnMostrar.addEventListener('click', function() {
-//   if (inputContrasena.type === 'password') {
-//     inputContrasena.type = 'text';
-//     btnMostrar.textContent = 'Ocultar';
-//   } else {
-//     inputContrasena.type = 'password';
-//     btnMostrar.textContent = 'Mostrar';
-//   }
-// });
-
 registerBtn.addEventListener("click", () => {
 
-    const u = username.value;
-    const e = email.value;
-    const p = pass.value;
-    const p2 = pass2.value;
+    const usuario = username.value;
+    const correo = email.value;
+    const contrasena = pass.value;
+    const contrasena2 = pass2.value;
 
-    if (u != "" && e != "" && p != "" && p2 != "") {
-        if (validarEmail(e)) {
-            if (validarPass(p)) {
-                if (p == p2) {
+    if (usuario != "" && correo != "" && contrasena != "" && contrasena2 != "") {
+        if (validarEmail(correo)) {
+            if (validarPass(contrasena)) {
+                if (contrasena == contrasena2) {
                     Swal.fire({
                         title: 'Cuenta Creada Exitosamente',
                         text: 'Su cuenta se ha registrado exitosamente.',
@@ -56,7 +43,7 @@ registerBtn.addEventListener("click", () => {
                         confirmButtonText: 'Aceptar'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location = "./login.html";
+                            window.location = "./index.html";
                         }
                     })
                 } else {
