@@ -1,10 +1,13 @@
 /* FOOTER */
 footer{
+    position: relative;
+    bottom: 0;
     background: #202020;
     padding: 30px 0 30px 0;
     margin: auto;
     overflow: hidden;
     text-align: center;
+    width: 100%;
 }
 
 .container-footer{
@@ -12,7 +15,6 @@ footer{
     width: 90%;
     justify-content: space-evenly;
     margin: auto;
-    /* padding-bottom: 50px; */
     border-bottom: 1px solid #ccc;
 }
 
@@ -38,3 +40,33 @@ footer{
     padding-right: 5%;
 }
 
+
+/* CONTAINER */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+  min-height: 100vh;
+}
